@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>FablabUTC3DPrinting</Name>
+    <ProjectGuid>9b5936db-8c25-4bf9-9d1b-785d2fecc6a1</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FablabUTC3DPrinting</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>FablabUTC3DPrinting</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Client\whoami.php" />
+    <Compile Include="RegisterWidget.php" />
+    <Compile Include="Client\ulist.php" />
+    <Compile Include="Client\admin.php" />
+    <Compile Include="Client\commande.php" />
+    <Compile Include="Client\download.php" />
+    <Compile Include="Client\my.php" />
+    <Compile Include="DataProvider\config.php" />
+    <Compile Include="DataProvider\Item.php" />
+    <Compile Include="Client\LoginService.php" />
+    <Compile Include="DataProvider\WPDataSource.php" />
+    <Compile Include="DataProvider\MySQLDataSource.php" />
+    <Compile Include="DataProvider\PrintQuery.php" />
+    <Compile Include="DataProvider\User.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\References\" />
+    <Folder Include="DataProvider\" />
+    <Folder Include="Client\" />
+    <Folder Include="Attachments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Attachments\bagHolder.STL" />
+    <Content Include="Client\login.php" />
+    <Content Include="Client\References\Knockout.d.ts" />
+    <Content Include="Client\References\sorttable.js" />
+  </ItemGroup>
+</Project>
