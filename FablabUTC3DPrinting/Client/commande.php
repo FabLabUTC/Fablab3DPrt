@@ -1,6 +1,18 @@
 <?php 
 include_once 'LoginService.php'; 
 include_once PLUGIN_DIR . '/DataProvider/config.php';
+<link rel="stylesheet" type="text/css" media="all" href="jsdatepick-calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="jsdatepick-calendar/jsDatePick.min.1.3.js"></script>
+<script type="text/javascript">
+    window.onload = function(){
+        new JsDatePick({
+            useMode:2,
+            target:"dateField",
+            dateFormat:"%Y-%m-%d"
+        });
+    };
+</script>
+
 if (isset($_FILES["Commande_File"]) && isset($_POST["Commande_Description"]) && isset($_POST["Commande_DeadLine"]))
 {
     move_uploaded_file($_FILES["Commande_File"]["tmp_name"], $_FILES["Commande_File"]["name"]);
@@ -37,7 +49,7 @@ else
                 </tr>
                 <tr>
                     <td>DeadLine:</td>
-                    <td><input type="datetime" name="Commande.DeadLine" /></td>
+                    <td><input type="datetime" id="dateField" name="Commande.DeadLine" /></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="Envoyer"/></td>
