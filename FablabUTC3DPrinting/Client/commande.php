@@ -1,6 +1,3 @@
-<?php 
-include_once 'LoginService.php'; 
-include_once PLUGIN_DIR . '/DataProvider/config.php';
 <link rel="stylesheet" type="text/css" media="all" href="jsdatepick-calendar/jsDatePick_ltr.min.css" />
 <script type="text/javascript" src="jsdatepick-calendar/jsDatePick.min.1.3.js"></script>
 <script type="text/javascript">
@@ -12,6 +9,10 @@ include_once PLUGIN_DIR . '/DataProvider/config.php';
         });
     };
 </script>
+
+<?php 
+include_once 'LoginService.php'; 
+include_once PLUGIN_DIR . '/DataProvider/config.php';
 
 if (isset($_FILES["Commande_File"]) && isset($_POST["Commande_Description"]) && isset($_POST["Commande_DeadLine"]))
 {
